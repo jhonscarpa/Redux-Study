@@ -15,11 +15,10 @@ export function Module() {
         <ChevronDown className="w-5 h-5 ml-auto text-zinc-400" />
       </button>
       <nav className="relative flex flex-col gap-4 p-6">
-        <Lesson />
-        <Lesson />
-        <Lesson />
-        <Lesson />
-        <Lesson />
+        <Lesson title="Conceitos do Redux" duration="10:33" />
+        <Lesson title="Conceitos do Redux" duration="10:33" />
+        <Lesson title="Conceitos do Redux" duration="10:33" />
+        <Lesson title="Conceitos do Redux" duration="10:33" />
       </nav>
     </div>
   )
