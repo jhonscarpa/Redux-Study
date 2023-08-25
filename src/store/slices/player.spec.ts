@@ -1,11 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { player as reducer, play, next } from './player'
+import { player as reducer, play, next, IPropsPlayerState } from './player'
 
-const exampleState = {
+const exampleState: IPropsPlayerState = {
   course: {
+    id: 1,
     modules: [
       {
-        id: '1',
+        id: 1,
         title: 'Iniciando com React',
         lessons: [
           { id: 'Jai8w6K_GnY', title: 'CSS Modules', duration: '13:45' },
@@ -17,7 +18,7 @@ const exampleState = {
         ],
       },
       {
-        id: '2',
+        id: 2,
         title: 'Estrutura da aplicação',
         lessons: [
           {
@@ -67,7 +68,7 @@ describe('Player slice', () => {
       {
         ...exampleState,
         currentLessonIndex: 1,
-        currentModuleIndex:1
+        currentModuleIndex: 1,
       },
       next(),
     )
@@ -75,5 +76,4 @@ describe('Player slice', () => {
     expect(state.currentModuleIndex).toEqual(1)
     expect(state.currentLessonIndex).toEqual(1)
   })
-
 })
